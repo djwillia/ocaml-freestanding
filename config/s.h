@@ -42,7 +42,26 @@
 //#define HAS_STACK_OVERFLOW_DETECTION
 #define OCAML_OS_TYPE "freestanding"
 #define OCAML_OS_TYPE "freestanding"
+#define HAS_STDINT_H
 #define OCAML_OS_TYPE "freestanding"
+#define HAS_STDINT_H
 #define OCAML_OS_TYPE "freestanding"
+#define HAS_STDINT_H
 #define OCAML_OS_TYPE "freestanding"
+#define HAS_STDINT_H
 #define OCAML_OS_TYPE "freestanding"
+#define HAS_STDINT_H
+#define OCAML_OS_TYPE "freestanding"
+#define HAS_STDINT_H
+#define OCAML_OS_TYPE "freestanding"
+#define HAS_STDINT_H
+#define OCAML_OS_TYPE "freestanding"
+#define HAS_STDINT_H
+#define OCAML_OS_TYPE "freestanding"
+#define HAS_STDINT_H
+#define OCAML_OS_TYPE "freestanding"
+#define HAS_STDINT_H
+#define OCAML_OS_TYPE "freestanding"
+#define HAS_STDINT_H
+#define OCAML_OS_TYPE "freestanding"
+#define HAS_STDINT_H
