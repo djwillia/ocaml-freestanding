@@ -8,8 +8,12 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
-#define STUB_ABORT(function) \
-    int __unsup_##function(void) __asm__(#function) __attribute__((noreturn)); \
+#define STR_EXPAND(y) #y
+#define STR(x) STR_EXPAND(x)
+#define UNDERSCORE(x) STR(_##x)
+
+#define STUB_ABORT(function)                                            \
+    int __unsup_##function(void) __asm__(UNDERSCORE(function)) __attribute__((noreturn)); \
     int __unsup_##function(void) \
     { \
         printf("STUB: abort: %s() called\n", #function); \
@@ -17,7 +21,7 @@
     }
 
 #define STUB_WARN_ONCE(type, function, ret) \
-    type __unsup_##function(void) __asm__(#function); \
+    type __unsup_##function(void) __asm__(UNDERSCORE(function));    \
     type __unsup_##function(void) \
     { \
         static int called = 0; \
@@ -30,7 +34,7 @@
     }
 
 #define STUB_IGNORE(type, function, ret) \
-    type __unsup_##function(void) __asm__(#function); \
+    type __unsup_##function(void) __asm__(UNDERSCORE(function));    \
     type __unsup_##function(void) \
     { \
 	errno = ENOSYS; \

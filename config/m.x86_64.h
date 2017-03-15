@@ -3,9 +3,9 @@
 #define SIZEOF_LONG 8
 #define SIZEOF_PTR 8
 #define SIZEOF_SHORT 2
-#define ARCH_INT64_TYPE long
-#define ARCH_UINT64_TYPE unsigned long
-#define ARCH_INT64_PRINTF_FORMAT "l"
+#define ARCH_INT64_TYPE long long
+#define ARCH_UINT64_TYPE unsigned long long
+#define ARCH_INT64_PRINTF_FORMAT "ll"
 #undef ARCH_BIG_ENDIAN
 #undef ARCH_ALIGN_DOUBLE
 #undef ARCH_ALIGN_INT64
